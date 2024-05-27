@@ -1,4 +1,4 @@
-﻿@{
+﻿﻿@{
     Layout = null;
     ViewBag.Title = "My Work";
 }
@@ -13,9 +13,8 @@
             margin: 0;
             padding: 0;
             background-image: url('/images/360_f_571205629_onfrxqe3kmdhzz3tm91vdsdj9szamlwm.jpg');
-            background-size:cover;
-            background-position:center
-            height: 100vh;
+            background-size: cover;
+            background-position: center height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -74,7 +73,7 @@
             <img src="~/images/backg.jpeg" alt="POTTERY" />
         </a>
         <div class="desc">Experience the artistry of handmade pottery, where every piece tells a story of craftsmanship and tradition.</div>
-       
+
     </div>
 
     <div class="gallery">
@@ -84,6 +83,77 @@
         <div class="desc">Embrace the beauty of nature with our exquisite handmade flower vases. Crafted with care by skilled artisans</div>
         <h2> R2100 </h2>
     </div>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
 
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #ffffff;
+            padding: 30px;
+            width: 450px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        input[type="text"], input[type="number"] {
+            border: 1.5px solid #ecedec;
+            border-radius: 10px;
+            height: 40px;
+            padding: 0 10px;
+        }
+
+        button[type="submit"] {
+            margin-top: 20px;
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 10px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+            button[type="submit"]:hover {
+                background-color: #e64a19;
+            }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }</style>
+    <form action="MyWork" method="post"> @* creating a  form and directing it again to the mywork page *@
+        <p>Insert new products</p> @* inserting new products *@
+        <input type="text" name="Name" placeholder="Name" required>  @* enter name of product *@
+        <input type="text" name="Price" placeholder="Price" required> @* enter product price *@
+        <input type="text" name="Category" placeholder="Category" required>
+        <input type="number" name="Availability" placeholder="Availability" required>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>

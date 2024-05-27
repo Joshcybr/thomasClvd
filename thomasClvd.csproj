@@ -7,7 +7,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\ShoppingCartApp.cs" />
+    <Compile Remove="Controllers\User.cs" />
+    <Compile Remove="Models\user.cs" />
+    <Compile Remove="Views\Home\cart.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="MyWork.cshtml" />
+    <Content Remove="Views\Cart - Copy.cshtml" />
+    <Content Remove="Views\Cart.cshtml" />
+    <Content Remove="Views\Home\shopping.cshtml" />
+    <Content Remove="Views\MoneyPage.cshtml" />
+    <Content Remove="Views\Payment - Copy.cshtml" />
+    <Content Remove="Views\Payment.cshtml" />
+    <Content Remove="Views\register.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="styles.css" />
+    <None Remove="Views\Home\StyleSheet.scss" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +39,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Home\ProductDisplay\" />
   </ItemGroup>
 
 </Project>
